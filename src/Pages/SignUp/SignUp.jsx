@@ -20,6 +20,10 @@ const SignUp = () => {
     // inside the updateProfile function, call the 'users' api to save user name and password (POST method)
     // const user = { name: data.name, email: data.email, password: data.password }
 
+    if (data.password !== data.confirmPassword) {
+      setError('Password does not match')
+      return
+    }
 
     createUser(data.email, data.password)
       .then(result => {
@@ -120,7 +124,7 @@ const SignUp = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="text" name="password" {...register("password", {
+                <input type="password" name="password" {...register("password", {
                   required: true,
                   minLength: 6,
                   maxLength: 20,
@@ -132,6 +136,16 @@ const SignUp = () => {
                 {errors.password?.type === 'minLength' && <p className="text-red-800" role="alert">password must be 6 characters</p>}
                 {errors.password?.type === 'maxLength' && <p className="text-red-800" role="alert">password must be less than or equal to 20 characters</p>}
                 {errors.password?.type === 'pattern' && <p className="text-red-800" role="alert">password must have at least one uppercase, and an one special character</p>}
+              </div>
+
+              {/* confirm password */}
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Confirm Password</span>
+                </label>
+
+                <input type="password" placeholder="confirm password" {...register("confirmPassword", { required: true })} name="confirmPassword" className="input input-bordered" />
+                {errors.email && <span className="text-red-700">please confirm your password</span>}
               </div>
 
               {/* users photo url */}
