@@ -10,11 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "animate.css": "^4.1.1",
     "firebase": "^9.22.2",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
+    "react-awesome-reveal": "^4.2.3",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^1.3.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.13.0",
     "sort-by": "^1.2.0"
   },
@@ -31,5 +36,18 @@
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.9"
-  }
+  },
+  "description": "��#\u0000 \u0000b\u00007\u00001\u00002\u0000-\u0000s\u0000u\u0000m\u0000m\u0000e\u0000r\u0000-\u0000c\u0000a\u0000m\u0000p\u0000-\u0000c\u0000l\u0000i\u0000e\u0000n\u0000t\u0000-\u0000s\u0000i\u0000d\u0000e\u0000-\u0000a\u0000j\u0000a\u0000u\u0000n\u0000i\u00000\u00001\u0000\r\u0000 \u0000",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/programming-hero-web-course1/b712-summer-camp-client-side-ajauni01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/programming-hero-web-course1/b712-summer-camp-client-side-ajauni01/issues"
+  },
+  "homepage": "https://github.com/programming-hero-web-course1/b712-summer-camp-client-side-ajauni01#readme"
 }
