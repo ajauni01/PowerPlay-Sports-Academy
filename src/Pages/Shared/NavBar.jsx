@@ -10,9 +10,9 @@ const NavBar = () => {
   const navOptions = < >
 
     <li><Link className="text-lg" to="/">Home</Link></li>
-    <li><Link className="text-lg" to="/training">Training</Link></li>
-    <li><Link className="text-lg" to="/academy">Academy</Link></li>
-    <li><Link className="text-lg" to="/contact">Contact</Link></li>
+    <li><Link className="text-lg" to="/training">Instructors</Link></li>
+    <li><Link className="text-lg" to="/academy">Classes</Link></li>
+    <li><Link className="text-lg" to="/contact">Dashboard</Link></li>
   </>
 
   return (
