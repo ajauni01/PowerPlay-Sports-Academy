@@ -4,9 +4,12 @@ import {
 import Main from "../Pages/Layout/Main";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home/Home";
-import Training from "../Pages/Training/Training";
-import Academy from "../Pages/Academy/Academy";
 import Contact from "../Pages/Contact/Contact";
+import Instructors from "../Pages/Instructors/Instructors";
+import { ClassNames } from "@emotion/react";
+import Classes from "../Pages/Classes/Classes";
+import Login from "../Pages/Login/Login";
+import SignUp from "../Pages/SignUp/SignUp";
 
 export const router = createBrowserRouter([
   {
@@ -19,16 +22,24 @@ export const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "training",
-        element: <Training></Training>
+        path: "instructors",
+        element: <Instructors></Instructors>
       },
       {
-        path: "academy",
-        element: <Academy></Academy>
+        path: "classes",
+        element: <Classes></Classes>
       },
       {
         path: "contact",
         element: <Contact></Contact>
+      },
+      {
+        path: "login",
+        element: <Login></Login>
+      },
+      {
+        path: "signUp",
+        element: <SignUp></SignUp>
       }
     ],
   },

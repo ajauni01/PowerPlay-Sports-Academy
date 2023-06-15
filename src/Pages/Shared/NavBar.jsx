@@ -2,16 +2,14 @@ import { Link } from "react-router-dom";
 import 'animate.css';
 import { Fade } from "react-awesome-reveal";
 import logo from '../../../public/icon.png'
-import Banner from "../Home/Banner/Banner";
-
 
 const NavBar = () => {
 
   const navOptions = < >
 
     <li><Link className="text-lg" to="/">Home</Link></li>
-    <li><Link className="text-lg" to="/training">Instructors</Link></li>
-    <li><Link className="text-lg" to="/academy">Classes</Link></li>
+    <li><Link className="text-lg" to="/instructors">Instructors</Link></li>
+    <li><Link className="text-lg" to="/classes">Classes</Link></li>
     <li><Link className="text-lg" to="/contact">Dashboard</Link></li>
   </>
 
@@ -39,7 +37,7 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Login</a>
+        <Link to="/login"><a className="btn">Login</a></Link>
       </div>
 
     </div>
