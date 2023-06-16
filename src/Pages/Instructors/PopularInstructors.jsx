@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
+import PopularClassCard from '../Home/PopularClass/PopularClassCard';
+import PopularInstructorCard from './PopularInstructorCard';
 
 const PopularInstructors = () => {
   const [popularInstructors, setPopularInstructors] = useState([])
 
   const topInstructors = popularInstructors.slice(0, 6);
+  // console.log('top instructors', topInstructors)
 
   useEffect(() => {
     fetch('http://localhost:5000/instructors')
@@ -21,11 +24,10 @@ const PopularInstructors = () => {
         </Fade>
       </div>
 
-      <div className='grid grid-cols-2 md:grid-cols-3 gap-5 mb-24 ms-20 '>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-5 mb-24 ms-20 '>
         {
-          topInstructors.map(instructor => <PopularInstructors key={instructor._id} instructor={instructor}></PopularInstructors>)
+          topInstructors.map(instructor => <PopularInstructorCard key={instructor._id} instructor={instructor}></PopularInstructorCard>)
         }
-
       </div>
 
     </div>

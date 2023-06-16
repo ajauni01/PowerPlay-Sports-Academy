@@ -21,7 +21,7 @@ const PopularClass = () => {
         </Fade>
       </div>
 
-      <div className='grid grid-cols-2 md:grid-cols-3 gap-5 mb-24 ms-20 '>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-5 mb-24 ms-20 '>
         {
           topClasses.map(cls => <PopularClassCard key={cls._id} cls={cls}></PopularClassCard>)
         }

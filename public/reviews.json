@@ -1,0 +1,37 @@
+[
+  {
+    "image": "https://images.pexels.com/photos/7339102/pexels-photo-7339102.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "John Smith",
+    "sport": "Basketball",
+    "rating": 4.5,
+    "review": "Great class! The instructor was very knowledgeable and helped improve my skills."
+  },
+  {
+    "image": "https://images.pexels.com/photos/17040570/pexels-photo-17040570/free-photo-of-boys-playing-soccer.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "Emily Johnson",
+    "sport": "Soccer",
+    "rating": 4.8,
+    "review": "Amazing experience! The coach was patient and made the class enjoyable for everyone."
+  },
+  {
+    "image": "https://images.pexels.com/photos/16639180/pexels-photo-16639180/free-photo-of-man-playing-tennis-on-grass-court.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "David Wilson",
+    "sport": "Tennis",
+    "rating": 4.2,
+    "review": "I had a wonderful time learning tennis. The instructor provided excellent guidance."
+  },
+  {
+    "image": "https://images.pexels.com/photos/3967832/pexels-photo-3967832.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "Sarah Davis",
+    "sport": "Swimming",
+    "rating": 4.7,
+    "review": "The swimming class was fantastic. The instructor was friendly and helped me overcome my fear of water."
+  },
+  {
+    "image": "https://images.pexels.com/photos/6715947/pexels-photo-6715947.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "Michael Thompson",
+    "sport": "Gymnastics",
+    "rating": 4.6,
+    "review": "The gymnastics class was incredible! The instructor was skilled and made learning fun."
+  }
+]
