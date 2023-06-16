@@ -1,0 +1,52 @@
+[
+  {
+    "image": "https://images.pexels.com/photos/7339102/pexels-photo-7339102.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "Basketball Class",
+    "students": 25
+  },
+  {
+    "image": "https://images.pexels.com/photos/17040570/pexels-photo-17040570/free-photo-of-boys-playing-soccer.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "Soccer Class",
+    "students": 40
+  },
+  {
+    "image": "https://images.pexels.com/photos/16639180/pexels-photo-16639180/free-photo-of-man-playing-tennis-on-grass-court.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "Tennis Class",
+    "students": 15
+  },
+  {
+    "image": "https://images.pexels.com/photos/3967832/pexels-photo-3967832.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "Swimming Class",
+    "students": 32
+  },
+  {
+    "image": "https://images.pexels.com/photos/6715947/pexels-photo-6715947.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "Gymnastics Class",
+    "students": 20
+  },
+  {
+    "image": "https://images.pexels.com/photos/7991193/pexels-photo-7991193.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "Martial Arts Class",
+    "students": 12
+  },
+  {
+    "image": "https://images.pexels.com/photos/1472887/pexels-photo-1472887.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "Yoga Class",
+    "students": 18
+  },
+  {
+    "image": "https://images.pexels.com/photos/5154022/pexels-photo-5154022.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "Dance Class",
+    "students": 30
+  },
+  {
+    "image": "https://images.pexels.com/photos/16206232/pexels-photo-16206232/free-photo-of-man-skateboarding-and-child-cycling-in-skatepark.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "Cycling Class",
+    "students": 22
+  },
+  {
+    "image": "https://images.pexels.com/photos/6551175/pexels-photo-6551175.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "name": "Boxing Class",
+    "students": 27
+  }
+]
