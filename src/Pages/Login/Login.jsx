@@ -14,6 +14,13 @@ const Login = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm()
   const navigate = useNavigate()
   const provider = new GoogleAuthProvider()
+  const [showPassword, setShowPassword] = useState(false);
+  // function to hide or show password
+  const togglePassword = (event) => {
+    event.preventDefault()
+    setShowPassword(!showPassword)
+  }
+
 
   // social login or signUp option
   const handleGoogleSignIn = () => {
@@ -34,7 +41,6 @@ const Login = () => {
       })
       .catch(error => setError(error.message))
   }
-
 
   const onSubmit = data => {
     logIn(data.email, data.password)
@@ -86,7 +92,10 @@ const Login = () => {
                   <span className="label-text">Password</span>
                 </label>
 
-                <input type="password" placeholder="password" {...register("password", { required: true })} name="password" className="input input-bordered" />
+                <input type={showPassword ? 'text' : 'password'} placeholder="password" {...register("password", { required: true })} name="password" className="input input-bordered" />
+                {
+                  showPassword ? <button className="btn btn-link" onClick={togglePassword}>Hide Password</button> : <button className="btn btn-link" onClick={togglePassword}>Show Password</button>
+                }
                 {errors.email && <span className="text-red-700"> password is required</span>}
               </div>
 
