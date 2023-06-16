@@ -20,7 +20,22 @@ const SignUp = () => {
     signInWithPopup(auth, provider)
       .then(result => {
         const user = result.user;
-        console.log(user)
+        // save the new user info to the database upon a successful ONLY if he already doesn't exist in the database
+        const newUser = { name: user.displayName, email: user.email }
+        fetch('http://localhost:5000/users', {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(newUser)
+        })
+          .then(res => res.json())
+          .then(data => {
+            if (data.insertedId) {
+              console.log('new user is successfully saved to the database')
+            }
+          })
+
         // navigate the user to the home page
         navigate('/')
       })
@@ -72,25 +87,21 @@ const SignUp = () => {
         setError(error.message); // Set the error state using setError
       });
 
-    // TODO: send signup data to the backend
-    // fetch('http://localhost:5000/users', {
-    //   method: 'POST',
-    //   headers: {
-    //     'content-type': 'application/json'
-    //   },
-    //   body: JSON.stringify(user)
-    // })
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     if (data.insertedId) {
-
-    //     }
-    //   })
-
-    // reset() 
-    // sweet alert
-    // force logout user
-    // navigate to login again
+    // save the new user info to the database upon a successful ONLY if he already doesn't exist in the database
+    const user = { name: data.name, email: data.email }
+    fetch('http://localhost:5000/users', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(user)
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.insertedId) {
+          console.log('new user is successfully saved to the database')
+        }
+      })
 
   };
 
