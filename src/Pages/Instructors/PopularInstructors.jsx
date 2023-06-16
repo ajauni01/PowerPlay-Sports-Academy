@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
-import PopularClassCard from '../Home/PopularClass/PopularClassCard';
 import PopularInstructorCard from './PopularInstructorCard';
 
 const PopularInstructors = () => {
