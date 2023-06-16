@@ -3,6 +3,8 @@ import { AuthContext } from "../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import auth from "../../firebase/firebase.config";
 
 
 
@@ -12,12 +14,20 @@ const SignUp = () => {
   const [error, setError] = useState()
   const { register, handleSubmit, reset, formState: { errors } } = useForm()
   const navigate = useNavigate()
+  const provider = new GoogleAuthProvider()
+
+  // social login or signUp option
+  const handleGoogleSignUp = () => {
+    signInWithPopup(auth, provider)
+      .then(result => {
+        const user = result.user;
+        console.log(user)
+      })
+      .catch(error => setError(error.message))
+  }
 
   const onSubmit = data => {
     console.log(data.name)
-    // call the createUserWithEmailPassword
-    // updateProfile
-    // inside the updateProfile function, call the 'users' api to save user name and password (POST method)
     // const user = { name: data.name, email: data.email, password: data.password }
 
     if (data.password !== data.confirmPassword) {
@@ -61,7 +71,7 @@ const SignUp = () => {
         setError(error.message); // Set the error state using setError
       });
 
-
+    // TODO: send signup data to the backend
     // fetch('http://localhost:5000/users', {
     //   method: 'POST',
     //   headers: {
@@ -91,7 +101,7 @@ const SignUp = () => {
 
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">SignUp now!</h1>
-            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <p className="py-6 font-semi-bold">PowerPlay Sports Academy is a renowned sports facility dedicated to providing comprehensive training and development programs for athletes of all ages and skill levels. With state-of-the-art facilities and expert coaches, they offer a wide range of sports programs designed to enhance performance, promote physical fitness, and foster a love for sports.</p>
           </div>
 
           <div className="card flex-shrink-0 w-full md:w-[500px]  shadow-2xl bg-base-100">
@@ -165,7 +175,9 @@ const SignUp = () => {
               <p className="text-red-700 mt-5 text-xl font-bold">{error}</p>
             </form>
 
-
+            {/* social login option */}
+            <div className="divider font-bold">OR</div>
+            <button className="btn btn-primary" onClick={handleGoogleSignUp}>SignUP With Google</button>
           </div>
 
         </div>

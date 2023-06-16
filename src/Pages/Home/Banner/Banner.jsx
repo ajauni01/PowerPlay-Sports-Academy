@@ -12,7 +12,7 @@ const Banner = () => {
     <div>
       <Carousel
         autoPlay={true}
-        interval={3000}
+        interval={2000}
         infiniteLoop={true}
         swipeable={true}
         showStatus={false}
