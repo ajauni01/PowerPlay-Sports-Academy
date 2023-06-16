@@ -2,11 +2,10 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
-
-
+import { FaGoogle } from 'react-icons/fa';
 
 
 const SignUp = () => {
@@ -22,6 +21,8 @@ const SignUp = () => {
       .then(result => {
         const user = result.user;
         console.log(user)
+        // navigate the user to the home page
+        navigate('/')
       })
       .catch(error => setError(error.message))
   }
@@ -159,7 +160,6 @@ const SignUp = () => {
               </div>
 
               {/* users photo url */}
-
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Photo url</span>
@@ -172,12 +172,15 @@ const SignUp = () => {
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Sign Up</button>
               </div>
-              <p className="text-red-700 mt-5 text-xl font-bold">{error}</p>
             </form>
+            {/* form-ends */}
 
             {/* social login option */}
             <div className="divider font-bold">OR</div>
-            <button className="btn btn-primary" onClick={handleGoogleSignUp}>SignUP With Google</button>
+            <button onClick={handleGoogleSignUp}> <FaGoogle className="w-full mx-auto mb-15 text-5xl font-bold text-blue-800" /></button>
+            <p className="text-center mb-3 mt-5 font-semibold text-xl">Already have an account? <Link to="/login"><button className="btn btn-link">Login</button></Link></p>
+
+            <p className="text-red-700 mt-5 text-xl font-bold text-center mb-5">{error}</p>
           </div>
 
         </div>
