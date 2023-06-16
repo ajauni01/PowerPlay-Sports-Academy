@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper";
 import { useEffect, useState } from "react";
+import { Fade } from 'react-awesome-reveal';
 
 
 const Reviews = () => {
@@ -21,6 +22,11 @@ const Reviews = () => {
 
   return (
     <>
+      <div className="animate__fadeInDown text-7xl mb-14 text-center">
+        <Fade cascade delay={200}>
+          <span className='text-green-800 font-bold'>What Our Clients Say</span>
+        </Fade>
+      </div>
 
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
 
