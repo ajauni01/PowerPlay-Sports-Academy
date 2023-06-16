@@ -96,97 +96,95 @@ const SignUp = () => {
 
 
   return (
-    <div>
-      <div className="hero w-full min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse">
 
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">SignUp now!</h1>
-            <p className="py-6 font-semi-bold">PowerPlay Sports Academy is a renowned sports facility dedicated to providing comprehensive training and development programs for athletes of all ages and skill levels. With state-of-the-art facilities and expert coaches, they offer a wide range of sports programs designed to enhance performance, promote physical fitness, and foster a love for sports.</p>
-          </div>
+    <div className="hero w-full min-h-screen bg-base-200">
+      <div className="hero-content flex-col lg:flex-row-reverse">
 
-          <div className="card flex-shrink-0 w-full md:w-[500px]  shadow-2xl bg-base-100">
-
-            {/* "handleSubmit" will validate your inputs before invoking "onSubmit"  */}
-            < form onSubmit={handleSubmit(onSubmit)} className="card-body">
-              {/* user name */}
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Name</span>
-                </label>
-
-                <input type="text" placeholder="name" {...register("name", { required: true })} name="name" className="input input-bordered" />
-                {/* errors will return when field validation fails  */}
-                {errors.name && <span className="text-red-700">name is required</span>}
-              </div>
-
-              {/* user email */}
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-
-                <input type="text" placeholder="email" {...register("email", { required: true })} name="email" className="input input-bordered" />
-                {errors.email && <span className="text-red-700">email is required</span>}
-              </div>
-
-              {/* user password */}
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input type="password" name="password" {...register("password", {
-                  required: true,
-                  minLength: 6,
-                  maxLength: 20,
-                  pattern: /^(?=.*?[A-Z])(?=.*?[^a-zA-Z0-9]).{6,}$/,
-                })}
-
-                  placeholder="password" className="input input-bordered" />
-                {errors.password?.type === 'required' && <p className="text-red-800" role="alert">password is required</p>}
-                {errors.password?.type === 'minLength' && <p className="text-red-800" role="alert">password must be 6 characters</p>}
-                {errors.password?.type === 'maxLength' && <p className="text-red-800" role="alert">password must be less than or equal to 20 characters</p>}
-                {errors.password?.type === 'pattern' && <p className="text-red-800" role="alert">password must have at least one uppercase, and an one special character</p>}
-              </div>
-
-              {/* confirm password */}
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Confirm Password</span>
-                </label>
-
-                <input type="password" placeholder="confirm password" {...register("confirmPassword", { required: true })} name="confirmPassword" className="input input-bordered" />
-                {errors.email && <span className="text-red-700">please confirm your password</span>}
-              </div>
-
-              {/* users photo url */}
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Photo url</span>
-                </label>
-
-                <input type="text" placeholder="photo url" {...register("photoUrl", { required: true })} name="photoUrl" className="input input-bordered" />
-                {errors.photoUrl && <span className="text-red-700"> photoUrl is required</span>}
-              </div>
-
-              <div className="form-control mt-6">
-                <button className="btn btn-primary">Sign Up</button>
-              </div>
-            </form>
-            {/* form-ends */}
-
-            {/* social login option */}
-            <div className="divider font-bold">OR</div>
-            <button onClick={handleGoogleSignUp}> <FaGoogle className="w-full mx-auto mb-15 text-5xl font-bold text-blue-800" /></button>
-            <p className="text-center mb-3 mt-5 font-semibold text-xl">Already have an account? <Link to="/login"><button className="btn btn-link">Login</button></Link></p>
-
-            <p className="text-red-700 mt-5 text-xl font-bold text-center mb-5">{error}</p>
-          </div>
-
+        <div className="text-center lg:text-left">
+          <h1 className="text-5xl font-bold">SignUp now!</h1>
+          <p className="py-6 font-semi-bold">PowerPlay Sports Academy is a renowned sports facility dedicated to providing comprehensive training and development programs for athletes of all ages and skill levels. With state-of-the-art facilities and expert coaches, they offer a wide range of sports programs designed to enhance performance, promote physical fitness, and foster a love for sports.</p>
         </div>
-      </div>
 
-    </div >
+        <div className="card flex-shrink-0 w-full md:w-[600px]  shadow-2xl bg-base-100 mt-36 mb-20">
+
+          {/* "handleSubmit" will validate your inputs before invoking "onSubmit"  */}
+          < form onSubmit={handleSubmit(onSubmit)} className="card-body">
+            {/* user name */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+
+              <input type="text" placeholder="name" {...register("name", { required: true })} name="name" className="input input-bordered" />
+              {/* errors will return when field validation fails  */}
+              {errors.name && <span className="text-red-700">name is required</span>}
+            </div>
+
+            {/* user email */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Email</span>
+              </label>
+
+              <input type="text" placeholder="email" {...register("email", { required: true })} name="email" className="input input-bordered" />
+              {errors.email && <span className="text-red-700">email is required</span>}
+            </div>
+
+            {/* user password */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Password</span>
+              </label>
+              <input type="password" name="password" {...register("password", {
+                required: true,
+                minLength: 6,
+                maxLength: 20,
+                pattern: /^(?=.*?[A-Z])(?=.*?[^a-zA-Z0-9]).{6,}$/,
+              })}
+
+                placeholder="password" className="input input-bordered" />
+              {errors.password?.type === 'required' && <p className="text-red-800" role="alert">password is required</p>}
+              {errors.password?.type === 'minLength' && <p className="text-red-800" role="alert">password must be 6 characters</p>}
+              {errors.password?.type === 'maxLength' && <p className="text-red-800" role="alert">password must be less than or equal to 20 characters</p>}
+              {errors.password?.type === 'pattern' && <p className="text-red-800" role="alert">password must have at least one uppercase, and an one special character</p>}
+            </div>
+
+            {/* confirm password */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Confirm Password</span>
+              </label>
+
+              <input type="password" placeholder="confirm password" {...register("confirmPassword", { required: true })} name="confirmPassword" className="input input-bordered" />
+              {errors.email && <span className="text-red-700">please confirm your password</span>}
+            </div>
+
+            {/* users photo url */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Photo url</span>
+              </label>
+
+              <input type="text" placeholder="photo url" {...register("photoUrl", { required: true })} name="photoUrl" className="input input-bordered" />
+              {errors.photoUrl && <span className="text-red-700"> photoUrl is required</span>}
+            </div>
+
+            <div className="form-control mt-6">
+              <button className="btn btn-primary">Sign Up</button>
+            </div>
+          </form>
+          {/* form-ends */}
+
+          {/* social login option */}
+          <div className="divider font-bold">OR</div>
+          <button onClick={handleGoogleSignUp}> <FaGoogle className="w-full mx-auto mb-15 text-5xl font-bold text-blue-800" /></button>
+          <p className="text-center mb-3 mt-5 font-semibold text-xl">Already have an account? <Link to="/login"><button className="btn btn-link">Login</button></Link></p>
+
+          <p className="text-red-700 mt-5 text-xl font-bold text-center mb-5">{error}</p>
+        </div>
+
+      </div>
+    </div>
   );
 };
 
