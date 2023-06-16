@@ -4,11 +4,11 @@ import {
 import Main from "../Pages/Layout/Main";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home/Home";
-import Contact from "../Pages/Contact/Contact";
 import Instructors from "../Pages/Instructors/Instructors";
 import Classes from "../Pages/Classes/Classes";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -29,8 +29,8 @@ export const router = createBrowserRouter([
         element: <Classes></Classes>
       },
       {
-        path: "contact",
-        element: <Contact></Contact>
+        path: "dashboard",
+        element: <Dashboard></Dashboard>
       },
       {
         path: "login",

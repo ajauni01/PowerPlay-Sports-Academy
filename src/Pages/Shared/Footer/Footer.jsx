@@ -1,17 +1,25 @@
-import logo from '../../../../public/icon.png'
+import logo from '../../../../public/icon.png';
 
 const Footer = () => {
-
+  const contactInfo = {
+    phone: "+1 (555) 123-4567",
+    email: "info@powerplaysports.com",
+    address: "123 Main Street, City, Country",
+  };
 
   return (
     <div>
-
       <footer className="footer p-10 bg-base-300 text-base-content">
         <div>
-          <img className='w-[36px] h-[36px]' src={logo} alt="" />
+          <img className="w-[36px] h-[36px]" src={logo} alt="" />
 
-
-          <p ><span className='font-bold text-2xl mb-2'>PowerPlay Sports Academy</span><br />Providing sports training since 1992</p>
+          <p className='mb-5'>
+            <span className="font-bold text-3xl mb-2">PowerPlay Sports Academy</span>
+            <br />
+            <span className='font-semibold font-xl'>Providing sports training since 1992</span>
+          </p>
+          <p>{contactInfo.address}</p>
+          <p>Contact: {contactInfo.phone} | Email: {contactInfo.email}</p>
           <p>Copyright © 2023 - All right reserved</p>
         </div>
         <div>
@@ -35,7 +43,6 @@ const Footer = () => {
           <a className="link link-hover">Cookie policy</a>
         </div>
       </footer>
-
     </div>
   );
 };
