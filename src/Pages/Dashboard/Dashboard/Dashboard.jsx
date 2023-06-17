@@ -1,7 +1,11 @@
 import { Outlet } from "react-router-dom";
+import useUserAuthorization from "../../../hooks/userAuthorization";
 
 
 const Dashboard = () => {
+  // show the relevant dashboard based on the user's authorization
+  const { data } = useUserAuthorization()
+  console.log('user role from the backend', data)
 
 
   return (

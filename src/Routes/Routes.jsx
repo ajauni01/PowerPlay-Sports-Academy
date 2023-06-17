@@ -49,7 +49,7 @@ export const router = createBrowserRouter([
 
   // dashboard for admin, instructors, & students
   {
-    path: "dashboard",
+    path: "/dashboard",
     element: <Dashboard />,
     errorElement: <ErrorPage />,
     children: [
