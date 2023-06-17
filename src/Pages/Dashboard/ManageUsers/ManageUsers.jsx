@@ -1,15 +1,59 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 
 
 const ManageUsers = () => {
   const [registeredUsers, setRegisteredUsers] = useState([]);
+  const [userRole, setUserRole] = useState('');
 
   useEffect(() => {
-    // // get all the registered users data from the backend
+    // get all the registered users data from the backend
     axios.get('http://localhost:5000/allUsers')
-      .then(data => setRegisteredUsers(data.data))
-  })
+      .then(data => setRegisteredUsers(data.data));
+  }, [registeredUsers, userRole]);
+
+  // function to make a particular user an admin
+  const handleMakeAdmin = id => {
+    fetch(`http://localhost:5000/allUsers/admin/${id}`, {
+      method: 'PATCH',
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.modifiedCount) {
+          // update the user role to re-render
+          setUserRole('admin')
+          // sweetalert
+          Swal.fire({
+            title: 'Success!',
+            text: 'Admin Successfully Added',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+          })
+        }
+      })
+  }
+  // function to make a particular user an instructor
+  const handleMakeInstructor = id => {
+    fetch(`http://localhost:5000/allUsers/instructor/${id}`, {
+      method: 'PATCH',
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.modifiedCount) {
+          // update the user role to re-render
+          setUserRole('instructor')
+          // sweetalert
+          Swal.fire({
+            title: 'Success!',
+            text: 'Instructor Successfully Added',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+          })
+        }
+      })
+  }
+
 
   return (
     <div className="w-full md:w-[90%] md bg-base-300 p-32">
@@ -44,8 +88,33 @@ const ManageUsers = () => {
                   <td>{row.role}</td>
                   <td>
                     <div className="btn-group btn-group-vertical lg:btn-group-horizontal">
-                      <button className="btn btn-active">Make Admin</button>
-                      <button className="btn">Make Instructor</button>
+                      {/* make admin conditional rendering */}
+                      <div className="w-1/3">
+                        {row.role === 'admin' ? (
+                          <button className="btn btn-active" disabled style={{ backgroundColor: 'red' }}>
+                            <span className="text-white">Admin</span>
+                          </button>
+                        ) : (
+                          <button onClick={() => handleMakeAdmin(row._id)} className="btn btn-active" style={{ backgroundColor: 'green' }}>
+                            <span className="text-white">Make Admin</span>
+                          </button>
+                        )}
+
+                      </div>
+                      {/* make instructor conditional rendering */}
+
+                      <div className="w-1/3">
+                        {row.role === 'instructor' ? (
+                          <button className="btn btn-active" disabled style={{ backgroundColor: 'red' }}>
+                            <span className="text-white">Instructor</span>
+                          </button>
+                        ) : (
+                          <button onClick={() => handleMakeInstructor(row._id)} className="btn btn-active" style={{ backgroundColor: 'green' }}>
+                            <span className="text-white">Make Instructor</span>
+
+                          </button>
+                        )}
+                      </div>
 
                     </div>
                   </td>
