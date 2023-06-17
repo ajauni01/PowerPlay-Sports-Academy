@@ -16,6 +16,7 @@ import MyClasses from "../Pages/Dashboard/MyClasses/MyClasses";
 import SelectedClasses from "../Pages/Dashboard/SelectedClasses/SelectedClasses";
 import EnrolledClasses from "../Pages/Dashboard/EnrolledClasses/EnrolledClasses";
 import PaymentHistory from "../Pages/Dashboard/Dashboard/PaymentHistory/PaymentHistory";
+import DashBoardHolder from "../Pages/Dashboard/DashBoardHolder/DashBoardHolder";
 
 
 export const router = createBrowserRouter([
@@ -50,7 +51,7 @@ export const router = createBrowserRouter([
   // dashboard for admin, instructors, & students
   {
     path: "/dashboard",
-    element: <Dashboard />,
+    element: <DashBoardHolder></DashBoardHolder>,
     errorElement: <ErrorPage />,
     children: [
 
