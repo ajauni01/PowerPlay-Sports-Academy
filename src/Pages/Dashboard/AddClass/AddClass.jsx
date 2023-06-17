@@ -41,6 +41,7 @@ const AddClass = () => {
           axios.post('http://localhost:5000/addClass', { newClass: `${newClass}` }) // Enclosed template literal within backticks
             .then(data => {
               if (data.data.insertedId) {
+                reset()
                 Swal.fire({
                   title: 'Success!',
                   text: 'New Class Successfully Added, and Soon will be reviewed by the ADMIN',
