@@ -29,10 +29,6 @@ export const router = createBrowserRouter([
         element: <Classes></Classes>
       },
       {
-        path: "dashboard",
-        element: <Dashboard></Dashboard>
-      },
-      {
         path: "login",
         element: <Login></Login>
       },
@@ -42,5 +38,20 @@ export const router = createBrowserRouter([
       }
     ],
   },
+
+  // admin dashboard // 2nd route
+  {
+    path: "dashboard",
+    element: <Dashboard />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "addItem",
+        element: <AddItem />,
+      },
+
+
+    ],
+  }
 
 ]);
