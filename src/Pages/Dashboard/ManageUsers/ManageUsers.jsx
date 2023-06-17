@@ -3,7 +3,7 @@
 const ManageUsers = () => {
   return (
     <div>
-      <p>Manage Users</p>
+      <p>Manage users Page</p>
 
     </div>
   );
