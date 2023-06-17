@@ -22,7 +22,7 @@ const SignUp = () => {
         const user = result.user;
         // save the new user info to the database upon a successful ONLY if he already doesn't exist in the database
         const newUser = { name: user.displayName, email: user.email }
-        fetch('http://localhost:5000/users', {
+        fetch('https://power-play-sports-server-side.vercel.app/users', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'
@@ -89,7 +89,7 @@ const SignUp = () => {
 
     // save the new user info to the database upon a successful ONLY if he already doesn't exist in the database
     const user = { name: data.name, email: data.email }
-    fetch('http://localhost:5000/users', {
+    fetch('https://power-play-sports-server-side.vercel.app/users', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

@@ -9,7 +9,7 @@ const PopularInstructors = () => {
   // console.log('top instructors', topInstructors)
 
   useEffect(() => {
-    fetch('http://localhost:5000/instructors')
+    fetch('https://power-play-sports-server-side.vercel.app/instructors')
       .then(res => res.json())
       .then(data => setPopularInstructors(data));
   }, []);

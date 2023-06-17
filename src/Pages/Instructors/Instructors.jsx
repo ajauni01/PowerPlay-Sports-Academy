@@ -10,7 +10,7 @@ const Instructors = () => {
   const [allInstructors, setAllInstructors] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/instructors')
+    fetch('https://power-play-sports-server-side.vercel.app/instructors')
       .then(res => res.json())
       .then(data => setAllInstructors(data));
   }, []);
