@@ -16,7 +16,7 @@ const useAdmin = () => {
       });
       const data = await response.json();
       console.log('admin data from the backend', data);
-      return data.admin; // Assuming the server response has the 'admin' field indicating if the user is an admin or not
+      return data.admin; // Assuming the server response has the 'role' field indicating if the user is an admin or not
     },
   });
 

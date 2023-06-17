@@ -16,7 +16,7 @@ import SelectedClasses from "../Pages/Dashboard/SelectedClasses/SelectedClasses"
 import EnrolledClasses from "../Pages/Dashboard/EnrolledClasses/EnrolledClasses";
 import PaymentHistory from "../Pages/Dashboard/Dashboard/PaymentHistory/PaymentHistory";
 import DashBoardHolder from "../Pages/Dashboard/DashBoardHolder/DashBoardHolder";
-import AdminRoutes from "./AdminRoutes";
+
 
 
 export const router = createBrowserRouter([

@@ -7,6 +7,8 @@ import { Navigate, useLocation } from "react-router-dom";
 const AdminRoutes = () => {
   const { user, loading } = useContext(AuthContext)
   const [isAdmin, isAdminLoading] = useAdmin()
+  console.log('isAdmin and user', isAdmin, user)
+
   const location = useLocation()
 
   if (loading || isAdminLoading) {
