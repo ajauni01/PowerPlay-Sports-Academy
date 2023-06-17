@@ -5,7 +5,7 @@ import Dashboard from "../Dashboard/Dashboard";
 
 const DashBoardHolder = () => {
   return (
-    <div>
+    <div className="bg-base-200">
       <NavBar></NavBar>
       <Dashboard></Dashboard>
       <Footer></Footer>

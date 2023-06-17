@@ -23,24 +23,24 @@ const Dashboard = () => {
           {/* put conditions here depending on the nature of user */}
           {/* admin dashboard */}
           {data?.role === 'admin' && <>
-            <p className="text-2xl font-bold mt-28">Admin Dashboard</p>
+            <p className="text-3xl font-bold mt-[110%] ">Admin Dashboard</p>
             <NavLink to="/dashboard/manageClasses">
-              <li><a>Manage Classes</a></li>
+              <li className="text-2xl font-semibold text-blue-700 underline mt-3"><a>Manage Classes</a></li>;
             </NavLink>
             <NavLink to="/dashboard/manageUsers">
-              <li><a>Manage Users</a></li>
+              <li className="text-2xl font-semibold text-blue-700 underline"><a>Manage Users</a></li>
             </NavLink>
           </>}
 
           {/* instructor dashboard */}
           {data?.role === 'instructor' &&
             <>
-              <p className="text-2xl font-bold mt-28">Instructor Dashboard</p>
+              <p className="text-3xl font-bold mt-[110%] ">Instructor Dashboard</p>
               <NavLink to="/dashboard/addClass">
-                <li><a>Add Class</a></li>
+                <li className="text-2xl font-semibold text-blue-700 underline mt-3"><a>Add Class</a></li>
               </NavLink>
               <NavLink to="/dashboard/myClasses">
-                <li><a>My Classes</a></li>
+                <li className="text-2xl font-semibold text-blue-700 underline"><a>My Classes</a></li>
               </NavLink>
             </>
           }
@@ -48,15 +48,15 @@ const Dashboard = () => {
           {/* student dashboard */}
           {data?.role === 'student' &&
             <>
-              <p className="text-2xl font-bold mt-28">Student Dashboard</p>
+              <p className="text-3xl font-bold mt-[110%] ">Student Dashboard</p>
               <NavLink to="/dashboard/selectedClasses">
-                <li><a>Selected Classes</a></li>
+                <li className="text-2xl font-semibold text-blue-700 underline"><a>Selected Classes</a></li>
               </NavLink>
               <NavLink to="/dashboard/enrolledClasses">
-                <li><a>Enrolled Classes</a></li>
+                <li className="text-2xl font-semibold text-blue-700 underline mt-3"><a>Enrolled Classes</a></li>
               </NavLink>
               <NavLink to="/dashboard/paymentHistory">
-                <li><a>Payment History</a></li>
+                <li className="text-2xl font-semibold text-blue-700 underline mt-3"><a>Payment History</a></li>
               </NavLink>
             </>
           }
