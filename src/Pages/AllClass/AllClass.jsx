@@ -28,7 +28,7 @@ const AllClass = ({ cls }) => {
 
   const { image, name, students, instructor, price, seats } = cls;
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className={`card w-96 ${seats === 0 ? 'bg-red-500' : 'bg-base-100'} shadow-xl`}>
       <figure><img className="h-100px md:h-80" src={image} alt="Shoes" /></figure>
       <div className="card-body">
         <h2 className="card-title">
@@ -40,7 +40,7 @@ const AllClass = ({ cls }) => {
           <div className="badge badge-primary">Professional</div>
         </h2>
         <p className="text-xl font-bold">Total Students: {students}</p>
-        <p className="text-2xl font-bold">Price:${price}</p>
+        <p className="text-2xl font-bold">Price: ${price}</p>
         <p className="text-xl font-semibold">Available Seats: {seats}</p>
 
         <button onClick={handleSelect} className="btn btn-secondary">Select</button>
