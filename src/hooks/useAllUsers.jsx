@@ -6,7 +6,7 @@ const useAllUsers = () => {
   const { isLoading, data, error, refetch } = useQuery(['allUsers'], {
     queryFn: async () => {
       // fetch all the registered users
-      const response = await fetch('http://localhost:5000/allUsers');
+      const response = await fetch('https://sports2-orcin.vercel.app/allUsers');
       return response.json();
     },
   });

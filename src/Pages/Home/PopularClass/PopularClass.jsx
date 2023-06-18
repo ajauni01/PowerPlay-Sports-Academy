@@ -8,7 +8,7 @@ const PopularClass = () => {
   const topClasses = popularClasses.slice(0, 6);
 
   useEffect(() => {
-    fetch('http://localhost:5000/popularClasses')
+    fetch('https://sports2-orcin.vercel.app/popularClasses')
       .then(res => res.json())
       .then(data => setPopularClasses(data));
   }, []);

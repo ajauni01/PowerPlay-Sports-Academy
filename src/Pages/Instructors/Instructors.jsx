@@ -10,7 +10,7 @@ const Instructors = () => {
   const [allInstructors, setAllInstructors] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/instructors')
+    fetch('https://sports2-orcin.vercel.app/instructors')
       .then(res => res.json())
       .then(data => setAllInstructors(data));
   }, []);

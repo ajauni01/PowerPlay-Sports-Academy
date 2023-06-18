@@ -44,7 +44,7 @@ const AuthProvider = ({ children }) => {
         // update the loading state
         setLoading(false)
         // fetching 'jwt' using axios
-        axios.post('http://localhost:5000/jwt', { email: `${user.email}` }) // Enclosed template literal within backticks
+        axios.post('https://sports2-orcin.vercel.app/jwt', { email: `${user.email}` }) // Enclosed template literal within backticks
           .then(data => {
             localStorage.setItem('access-token', data.data.token)
           })
