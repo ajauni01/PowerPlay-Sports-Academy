@@ -9,7 +9,7 @@ const useUserAuthorization = () => {
   const { isLoading, data, error, refetch } = useQuery(['userAuthorization', user?.email], {
     queryFn: async () => {
       // send query parameter to the backend
-      const response = await fetch(`https://power-play-sports-server-side.vercel.app/userAuthorization?email=${user.email}`);
+      const response = await fetch(`http://localhost:5000/userAuthorization?email=${user.email}`);
       return response.json();
     },
   });

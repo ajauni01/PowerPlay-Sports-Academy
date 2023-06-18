@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "powerplay-sports-academy"
-  }
+    "default": "powerplay-sports-academy",
+    "staging": "powerplay-sports-academy"
+  },
+  "targets": {},
+  "etags": {}
 }

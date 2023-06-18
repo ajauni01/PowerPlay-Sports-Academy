@@ -9,13 +9,13 @@ const ManageUsers = () => {
 
   useEffect(() => {
     // get all the registered users data from the backend
-    axios.get('https://power-play-sports-server-side.vercel.app/allUsers')
+    axios.get('http://localhost:5000/allUsers')
       .then(data => setRegisteredUsers(data.data));
   }, [registeredUsers, userRole]);
 
   // function to make a particular user an admin
   const handleMakeAdmin = id => {
-    fetch(`https://power-play-sports-server-side.vercel.app/allUsers/admin/${id}`, {
+    fetch(`http://localhost:5000/allUsers/admin/${id}`, {
       method: 'PATCH',
     })
       .then(res => res.json())
@@ -35,7 +35,7 @@ const ManageUsers = () => {
   }
   // function to make a particular user an instructor
   const handleMakeInstructor = id => {
-    fetch(`https://power-play-sports-server-side.vercel.app/allUsers/instructor/${id}`, {
+    fetch(`http://localhost:5000/allUsers/instructor/${id}`, {
       method: 'PATCH',
     })
       .then(res => res.json())

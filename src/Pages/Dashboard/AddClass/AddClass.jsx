@@ -38,7 +38,7 @@ const AddClass = () => {
           const newClass = { className, instructorName, instructorEmail, availableSeats, price: parseFloat(price), image: imgURL }
 
           // save new class data to the database
-          axios.post('https://power-play-sports-server-side.vercel.app/addClass', { newClass: `${newClass}` }) // Enclosed template literal within backticks
+          axios.post('http://localhost:5000/addClass', { newClass: `${newClass}` }) // Enclosed template literal within backticks
             .then(data => {
               if (data.data.insertedId) {
                 reset()
