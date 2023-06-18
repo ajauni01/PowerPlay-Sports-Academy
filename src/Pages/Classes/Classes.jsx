@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
-import PopularClassCard from "../Home/PopularClass/PopularClassCard";
+import AllClass from "../AllClass/AllClass";
 
 
 const Classes = () => {
-
   const [allClasses, setAllClasses] = useState([])
 
   useEffect(() => {
@@ -24,7 +23,7 @@ const Classes = () => {
 
       <div className='grid grid-cols-1 md:grid-cols-3 gap-5 mb-24 ms-20 '>
         {
-          allClasses.map(cls => <PopularClassCard key={cls._id} cls={cls}></PopularClassCard>)
+          allClasses.map(cls => <AllClass key={cls._id} cls={cls}></AllClass>)
         }
 
       </div>

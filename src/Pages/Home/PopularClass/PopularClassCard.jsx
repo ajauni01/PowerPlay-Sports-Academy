@@ -15,6 +15,7 @@ const PopularClassCard = ({ cls }) => {
         </h2>
 
         <p className="text-xl font-bold">Total Students: {students}</p>
+        <button className="btn btn-secondary">Select</button>
 
       </div>
     </div>
