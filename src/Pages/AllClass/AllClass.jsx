@@ -25,7 +25,6 @@ const AllClass = ({ cls }) => {
     }
   }
 
-
   const { image, name, students, instructor, price, seats } = cls;
   return (
     <div className={`card w-96 ${seats === 0 ? 'bg-red-500' : 'bg-base-100'} shadow-xl`}>
