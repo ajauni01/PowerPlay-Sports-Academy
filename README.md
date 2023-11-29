@@ -34,7 +34,7 @@ The PowerPlay Sports Academy website utilizes:
 To run this project locally, follow these steps:
 
 ## Clone the Repository:
-git clone https://github.com/Powerplay-Sports-Academy.git
+git clone https://github.com/ajauni01/PowerPlay-Sports-Academy
 
 ## Install dependencies:
 npm install
