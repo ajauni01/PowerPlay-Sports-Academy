@@ -20,15 +20,15 @@ The PowerPlay Sports Academy website aims to offer a comprehensive sports experi
 ## Technologies Used
 The PowerPlay Sports Academy website utilizes:
 
-Firebase Authentication
-React Hook Form
-Axios
-Stripe (to be included)
-JWT for Security
-MERN Stack
-TanStack Query
-Framer Motion
-DaisyUI
+- Firebase Authentication
+- React Hook Form
+- Axios
+- Stripe (to be included)
+- JWT for Security
+- MERN Stack
+- TanStack Query
+- Framer Motion
+- DaisyUI
 
 ## Getting Started
 To run this project locally, follow these steps:
