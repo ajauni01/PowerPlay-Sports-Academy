@@ -27,6 +27,8 @@ Stripe (to be included)
 JWT for Security
 MERN Stack
 TanStack Query
+Framer Motion
+DaisyUI
 
 ## Getting Started
 To run this project locally, follow these steps:
