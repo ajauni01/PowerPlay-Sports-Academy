@@ -48,6 +48,6 @@ Visit http://localhost:3000 in your browser to explore the website.
 Contributions to the PowerPlay Sports Academy website are encouraged! Feel free to open issues or submit pull requests for ideas, bug reports, or feature requests. Your contributions are valued in improving this website.
 
 ## Contact
-For inquiries or support, please email us at info@powerplaysports.com. We're here to assist you.
+For inquiries or support, please email me at ajauni01@wsc.edu. I am here to assist you.
 
 Thank you for visiting the PowerPlay Sports Academy website! We're excited to enhance your sports journey.
