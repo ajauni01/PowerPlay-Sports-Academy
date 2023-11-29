@@ -41,6 +41,7 @@ npm install
 
 ## Start the development server:
 npm run dev
+
 Visit http://localhost:3000 in your browser to explore the website.
 
 ## Contributing
